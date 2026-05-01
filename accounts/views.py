@@ -32,7 +32,9 @@ def signup_view(request):
 
         user = User.objects.create_user(
             username=username, email=email, password=password,
-            role=role, first_name=first_name, last_name=last_name
+            role=role, first_name=first_name, last_name=last_name,
+            is_staff=(role == 'admin'),      # Admin role gets Django admin access
+            is_superuser=(role == 'admin'),  # Admin role gets full permissions
         )
         login(request, user)
         messages.success(request, f'Welcome, {user.username}! Account created.')
