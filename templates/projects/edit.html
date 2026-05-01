@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Edit Project{% endblock %}
+{% block page_title %}Edit Project{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card p-4">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Project Name</label>
+                    <input type="text" name="name" class="form-control" value="{{ project.name }}" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Description</label>
+                    <textarea name="description" class="form-control" rows="3">{{ project.description }}</textarea>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Members</label>
+                    <div class="border rounded p-3" style="max-height:200px;overflow-y:auto;">
+                        {% for u in users %}
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="members" value="{{ u.id }}" id="user_{{ u.id }}"
+                                {% if u in project.members.all %}checked{% endif %}>
+                            <label class="form-check-label" for="user_{{ u.id }}">{{ u.username }}</label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a href="{% url 'project_detail' project.pk %}" class="btn btn-outline-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

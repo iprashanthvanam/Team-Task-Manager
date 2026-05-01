@@ -1,0 +1,15 @@
+/* Extra custom styles */
+.badge-todo { background-color: #6c757d; color: white; }
+.badge-in_progress { background-color: #0d6efd; color: white; }
+.badge-done { background-color: #198754; color: white; }
+
+.table > :not(caption) > * > * { padding: 0.85rem 1rem; }
+.list-group-item { border-left: none; border-right: none; }
+.list-group-item:first-child { border-top: none; }
+
+.nav-pills .nav-link.active { background-color: #e94560; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
