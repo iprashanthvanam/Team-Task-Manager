@@ -1,1 +1,1 @@
-web: python manage.py migrate --no-input && python manage.py collectstatic --no-input && gunicorn team_task_manager.wsgi --log-file -
+web: python manage.py makemigrations --no-input && python manage.py migrate --no-input && python manage.py collectstatic --no-input && gunicorn team_task_manager.wsgi --log-file -
