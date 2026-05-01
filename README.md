@@ -79,7 +79,7 @@ A complete visual walkthrough of the application.
 ### 🔐 Login Page
 
 <div align="center">
-  <img src="screenshots/login.png" alt="Team Task Manager — Login Page" width="860"/>
+  <img src="images/login.png" alt="Team Task Manager — Login Page" width="860"/>
   <br/><br/>
   <sub><b>Secure login with session authentication.</b> Redirects to the dashboard on success, with proper error messages for invalid credentials.</sub>
 </div>
@@ -89,7 +89,7 @@ A complete visual walkthrough of the application.
 ### 📝 Sign Up Page
 
 <div align="center">
-  <img src="screenshots/signup.png" alt="Team Task Manager — Sign Up Page" width="860"/>
+  <img src="images/signup.png" alt="Team Task Manager — Sign Up Page" width="860"/>
   <br/><br/>
   <sub><b>Account creation with role selection.</b> Users can sign up as Admin or Member. Duplicate username and email validation is enforced server-side.</sub>
 </div>
@@ -99,7 +99,7 @@ A complete visual walkthrough of the application.
 ### 📊 Dashboard
 
 <div align="center">
-  <img src="screenshots/dashboard.png" alt="Team Task Manager — Dashboard" width="860"/>
+  <img src="images/dashboard.png" alt="Team Task Manager — Dashboard" width="860"/>
   <br/><br/>
   <sub><b>Central command view.</b> Displays total projects, task counts by status (Todo / In Progress / Done), overdue tasks, recent activity, and tasks assigned to the current user.</sub>
 </div>
@@ -109,7 +109,7 @@ A complete visual walkthrough of the application.
 ### 📁 Projects List
 
 <div align="center">
-  <img src="screenshots/projects.png" alt="Team Task Manager — Projects List" width="860"/>
+  <img src="images/projects.png" alt="Team Task Manager — Projects List" width="860"/>
   <br/><br/>
   <sub><b>All accessible projects in one view.</b> Admins see every project; Members see only their owned or assigned projects.</sub>
 </div>
@@ -119,7 +119,7 @@ A complete visual walkthrough of the application.
 ### 📋 Task Management
 
 <div align="center">
-  <img src="screenshots/tasks.png" alt="Team Task Manager — Task Management" width="860"/>
+  <img src="images/tasks.png" alt="Team Task Manager — Task Management" width="860"/>
   <br/><br/>
   <sub><b>Full task management with filters.</b> Filter by status, priority, project, or view only your assigned tasks. Overdue tasks are highlighted automatically.</sub>
 </div>
@@ -196,11 +196,11 @@ A complete visual walkthrough of the application.
 ┌─────────────────────────▼────────────────────────────────────┐
 │                    DJANGO APPLICATION                        │
 │                                                              │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐   │
-│  │  accounts/   │  │  projects/   │  │     tasks/       │   │
-│  │  views.py    │  │  views.py    │  │    views.py      │   │
-│  │  api_views   │  │  api_views   │  │    api_views     │   │
-│  └──────────────┘  └──────────────┘  └──────────────────┘   │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐    │
+│  │  accounts/   │  │  projects/   │  │     tasks/       │    │
+│  │  views.py    │  │  views.py    │  │    views.py      │    │
+│  │  api_views   │  │  api_views   │  │    api_views     │    │
+│  └──────────────┘  └──────────────┘  └──────────────────┘    │
 │                                                              │
 │  ┌───────────────────────────────────────────────────────┐   │
 │  │               Django REST Framework                   │   │
@@ -210,12 +210,12 @@ A complete visual walkthrough of the application.
 │  ┌───────────────────────────────────────────────────────┐   │
 │  │                   Django ORM                          │   │
 │  │     User ──< Task >── Project ──< ProjectMember       │   │
-│  └───────────────────────┬───────────────────────────────┘   │
+│  └────────────────────────┬──────────────────────────────┘   │
 └────────────────────────── │ ─────────────────────────────────┘
                             │
               ┌─────────────▼──────────────┐
-              │  PostgreSQL (Railway)       │
-              │  SQLite (local dev)         │
+              │  PostgreSQL (Railway)      │
+              │  SQLite (local dev)        │
               └────────────────────────────┘
 ```
 
